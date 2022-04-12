@@ -4,6 +4,7 @@ $yellow: #FFB800;
 $orange: #FF7A00;
 $red: #CF3E3B;
 $white: #FFFFFF;
+$black: #000000;
 $silver-100: #F6F6F6;
 $silver-600: #C1C1C1;
 $green-200: #E0EDCF;
@@ -12,47 +13,70 @@ $dark-800: #31352B;
 $dark-500: #505050;
 
 %opensans-300 {
-  font-family: 'OpenSans-Light', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 300;
 }
 
 %opensans-400 {
-  font-family: 'OpenSans-Regular', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 400;
 }
 
 %opensans-600 {
-  font-family: 'OpenSans-SemiBold', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 600;
 }
 
 %opensans-700 {
-  font-family: 'OpenSans-Bold', sans-serif;
+  font-family: 'OpenSans', sans-serif;
   font-weight: 700;
 }
 
 %ruda-400 {
-  font-family: 'Ruda-Regular', sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 400;
 }
 
 %ruda-600 {
-  font-family: 'Ruda-SemiBold', sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 600;
 }
 
 %ruda-700 {
-  font-family: 'Ruda-Bold', sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 700;
 }
 
 %ruda-900 {
-  font-family: 'Ruda-Black', sans-serif;
+  font-family: 'Ruda', sans-serif;
   font-weight: 900;
 }
 
-%bg{
+%bg {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
 }
