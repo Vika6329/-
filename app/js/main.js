@@ -4,13 +4,77 @@ $(function () {
     infinite: false,
     prevArrow: '<button type="button" class="slick-prev"> <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-prev"> </use> <span class="sr-only"> Предыдущий слайд </span> </svg></button> ',
     nextArrow: '<button type="button" class="slick-next">  <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-next"> </use> <span class="sr-only"> Следующий слайд </span> </svg></button> ',
+
+    responsive: [{
+        breakpoint: 1230,
+        settings: {
+          autoplay: true,
+          arrows: false,
+          autoplaySpeed: 3000,
+        }
+      },
+
+      {
+        breakpoint: 561,
+        settings: {
+          autoplay: false,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
+
   });
 
+});
+
+$(function () {
+  $('.brands__items').slick({
+    arrows: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    responsive: [{
+        breakpoint: 993,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+      {
+        breakpoint: 561,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+    ]
+  });
+});
+
+$(function () {
   $('.user-nav__link--cart, .cart__button').on('click', function () {
     $('.cart').toggleClass('cart--active')
     $('body').toggleClass('lock')
+  });
+
+  $('.user-nav__item--search').on('click', function () {
+    $('.form').toggleClass('form--active')
+  })
+
+  $('.menu-btn, .header-menu__close').on('click', function () {
+    $('.header-menu').toggleClass('header-menu--active')
+    $('body').toggleClass('lock')
     $('body').toggleClass('overlay')
   });
+
+  $('.catalog__button--menu').on('click', function () {
+    $('.catalog--menu').toggleClass('catalog--active')
+  })
 
   $(".rating__star").rateYo({
     maxValue: 1,
@@ -18,21 +82,32 @@ $(function () {
     starWidth: "16px",
     rating: "100%",
   });
-
-
-});
+})
 
 
 function show(anything) {
   document.querySelector('.catalog__button').value = anything;
 }
 
-
-
 let catalog = document.querySelector('.catalog');
 catalog.onclick = function () {
   catalog.classList.toggle('active');
 }
+
+$('html').on('click', function (event) {
+  if (!$(event.target).closest('.catalog--menu').length) {
+    $('.catalog').removeClass('catalog--active');
+  }
+});
+
+
+var inp = document.querySelector('.form__input');
+window.addEventListener('resize', function () {
+  inp.setAttribute('placeholder', this.innerWidth >= 768 ? 'Найти в магазине' : 'Я ищу...');
+});
+window.dispatchEvent(new Event('resize'));
+
+
 const totalPriceEl = document.querySelector('.cart__number');
 
 function calcCartPrice() {

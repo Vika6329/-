@@ -1,0 +1,38 @@
+.menu {
+  display: flex;
+
+  &__item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-right: 24px;
+    }
+  }
+
+  &__img {
+    height: 22px;
+    margin-right: 12px;
+    fill: $white;
+  }
+
+  &__link {
+    font-size: 13px;
+    letter-spacing: 0.03em;
+
+    @include mq('tablet-2') {
+      display: none;
+    }
+
+    @include mq('phone') {
+      width: 32px;
+    }
+  }
+
+  &--list {
+    @include mq('tablet-2') {
+      display: none;
+    }
+  }
+
+}

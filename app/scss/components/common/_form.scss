@@ -1,0 +1,90 @@
+.form {
+  max-width: 575px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-right: 48px;
+  transition: opacity 0.5s;
+
+  @include mq('desktop') {
+    margin-right: 10px;
+  }
+
+  @include mq('tablet') {
+    max-width: 100%;
+  }
+
+  &::before {
+    @include pseudo;
+    left: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    @extend %bg;
+    background-image: url('../images/sprite.svg#icon-search');
+  }
+
+
+  &__input {
+    padding: 15px 15px 15px 50px;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 6px 0 0 6px;
+
+    &::placeholder {
+      color: $dark-800;
+      font-weight: 400;
+    }
+
+    @include mq('tablet') {
+      max-width: 100%;
+      border-radius: 0;
+    }
+  }
+
+  &__btn {
+    position: absolute;
+    right: 0;
+    height: 100%;
+    padding: 15px 52px;
+    background-color: $dark-800;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 0 6px 6px 0;
+    transition: box-shadow 0.5s, background-color 0.5s;
+
+    &:hover {
+      background-color: rgba(49, 53, 43, 0.85);
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 4px rgba($white, 0.5);
+    }
+
+    &:active {
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
+    }
+
+    @include mq('tablet') {
+      border-radius: 0;
+    }
+  }
+
+  @include mq('tablet') {
+    position: absolute;
+    bottom: -52px;
+    right: 0;
+    margin: 0;
+    border: 1px solid $black;
+    opacity: 0;
+  }
+
+  &.form--active {
+    @include mq('tablet') {
+      opacity: 1;
+      z-index: 1;
+    }
+  }
+}
