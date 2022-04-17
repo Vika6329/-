@@ -123,8 +123,8 @@
     font-weight: 600;
     line-height: 1.5;
     transition: color 0.5s;
-  
-    p {
+    
+    span {
       @include line-clamp(2);
     }
 
