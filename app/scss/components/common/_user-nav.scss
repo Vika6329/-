@@ -2,6 +2,23 @@
   display: flex;
 
   &__item {
+
+    &--user {
+      display: block;
+
+      @include mq('tablet') {
+        display: none;
+      }
+    }
+
+    &--search {
+      display: none;
+
+      @include mq('tablet') {
+        display: block;
+      }
+    }
+
     &:not(:last-child) {
       margin-right: 11px;
 
@@ -70,16 +87,8 @@
     height: 30px;
     fill: $white;
 
-    @include mq('phone'){
+    @include mq('phone') {
       height: 24px;
-    }
-
-    &--search {
-      display: none;
-
-      @include mq('tablet') {
-        display: block;
-      }
     }
 
     &--user {

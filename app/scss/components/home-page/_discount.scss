@@ -37,6 +37,7 @@
     color: $dark-500;
     background-color: rgba($white, 0.8);
     padding: 24px;
+    border-radius: 4px;
   }
 
   &__title {
@@ -105,7 +106,7 @@
       box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
     }
 
-    &.slick-disabled {
+    &.slick-disabled svg {
       opacity: 0.8;
     }
 

@@ -59,7 +59,7 @@
     }
   }
 
-  &__form-item {
+  &__form {
     position: relative;
   }
 
@@ -82,6 +82,7 @@
 
   &__list {
     margin: 0;
+
     @include mq('tablet-2') {
       width: 100%;
       border-bottom: 1px solid rgba($white, 0.1);
@@ -99,34 +100,9 @@
     }
   }
 
-  &__menu {
-    column-count: 3;
-    column-gap: 75px;
-
-    @include mq('desktop') {
-      column-count: 2;
-    }
-
-    @include mq('tablet-2') {
-      column-count: 3;
-      column-gap: 50px;
-    }
-
-    @include mq('tablet') {
-      width: 100%;
-      margin-bottom: 25px;
-    }
-
-    @include mq('phone') {
-      column-count: 2;
-      column-gap: 50px;
-      width: fit-content;
-      margin: auto;
-    }
-  }
-
   &__email {
     margin: 0;
+
     @include mq('phone') {
       display: flex;
       justify-content: center;
@@ -135,41 +111,9 @@
     }
   }
 
-  &__contact {
-    margin: 0;
-    @include mq('tablet-2') {
-      width: 100%;
-    }
-
-    @include mq('phone') {
-      order: -1;
-    }
-  }
-
-  &__contacts {
-    display: flex;
-    flex-direction: column;
-
-    @include mq('phone') {
-      margin-bottom: 25px;
-      align-items: center;
-    }
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 18px;
-    }
-  }
-
   &__button {
     font-size: 12px;
     padding: 12px 16px;
-  }
-
-  &__contacts-link {
-    display: inline-block;
-    margin-bottom: 18px;
   }
 
   &__card {
@@ -188,7 +132,6 @@
   }
 }
 
-
 .payment {
   display: flex;
 
@@ -201,5 +144,64 @@
   @include mq('phone') {
     order: -1;
     margin-bottom: 25px;
+  }
+}
+
+.footer-contact {
+  margin: 0;
+
+  @include mq('tablet-2') {
+    width: 100%;
+  }
+
+  @include mq('phone') {
+    order: -1;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @include mq('phone') {
+      margin-bottom: 25px;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+}
+
+.footer-menu {
+  column-count: 3;
+  column-gap: 75px;
+
+  @include mq('desktop') {
+    column-count: 2;
+  }
+
+  @include mq('tablet-2') {
+    column-count: 3;
+    column-gap: 50px;
+  }
+
+  @include mq('tablet') {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  @include mq('phone') {
+    column-count: 2;
+    column-gap: 50px;
+    width: fit-content;
+    margin: auto;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
   }
 }

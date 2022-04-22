@@ -43,3 +43,11 @@ $dark-500: #505050;
   mask-size: cover;
   mask-position: center;
 }
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}

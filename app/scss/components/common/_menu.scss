@@ -7,6 +7,10 @@
 
     &:not(:last-child) {
       margin-right: 24px;
+
+      @include mq('phone') {
+        margin-right: 32px;
+      }
     }
   }
 
@@ -14,6 +18,10 @@
     height: 22px;
     margin-right: 12px;
     fill: $white;
+
+    @include mq('phone') {
+      margin-right: 0;
+    }
   }
 
   &__link {

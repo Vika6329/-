@@ -2,8 +2,8 @@ $(function () {
 
   $('.discount__inner').slick({
     infinite: false,
-    prevArrow: '<button type="button" class="slick-prev"> <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-prev"> </use> <span class="sr-only"> Предыдущий слайд </span> </svg></button> ',
-    nextArrow: '<button type="button" class="slick-next">  <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-next"> </use> <span class="sr-only"> Следующий слайд </span> </svg></button> ',
+    prevArrow: '<button type="button" class="slick-prev"> <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-prev"> </use>  </svg><span class="sr-only"> Предыдущий слайд </span></button> ',
+    nextArrow: '<button type="button" class="slick-next">  <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-next"> </use></svg><span class="sr-only"> Следующий слайд </span></button> ',
 
     responsive: [{
         breakpoint: 1230,
@@ -66,6 +66,12 @@ $(function () {
     $('.form').toggleClass('form--active')
   })
 
+  $('.catalog-content__fil, .filter__close').on('click', function () {
+    $('.filter').toggleClass('filter--active')
+    $('body').toggleClass('lock')
+    // $('body').toggleClass('overlay')
+  });
+
   $('.menu-btn, .header-menu__close').on('click', function () {
     $('.header-menu').toggleClass('header-menu--active')
     $('body').toggleClass('lock')
@@ -76,13 +82,117 @@ $(function () {
     $('.catalog--menu').toggleClass('catalog--active')
   })
 
-  $(".rating__star").rateYo({
+  $('.pagination__prev').on('click', function () {
+    $('.pagination__prev').toggleClass('pagination__prev--disabled')
+  })
+
+  $('.rating__star').rateYo({
     maxValue: 1,
     numStars: 1,
     starWidth: "16px",
     rating: "100%",
   });
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "₽",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  });
+
+  $('.catalog-content__btn').on('click', function () {
+    $('.catalog-content__btn').removeClass('catalog-content__btn--active')
+    $(this).addClass('catalog-content__btn--active')
+  });
+
+  $('.pagination__item').on('click', function () {
+    $('.pagination__item').removeClass('pagination__item--active')
+    $(this).addClass('pagination__item--active')
+  });
+
+  $('.button-list').on('click', function () {
+    $('.card').addClass('card--list')
+    $('.catalog-content__products').addClass('catalog-content__products--list')
+  })
+
+  $('.button-grid').on('click', function () {
+    $('.card').removeClass('card--list')
+    $('.catalog-content__products').removeClass('catalog-content__products--list')
+  })
+
+  $('.catalog-content__filter-select').styler();
 })
+
+var $range = $(".filter-price__input");
+var $inputFrom = $(".filter-price__from");
+var $inputTo = $(".filter-price__to");
+var instance;
+var min = 0;
+var max = 1000;
+var from = 0;
+var to = 0;
+
+$range.ionRangeSlider({
+  skin: "round",
+  type: "double",
+  min: min,
+  max: max,
+  from: 200,
+  to: 800,
+  onStart: updateInputs,
+  onChange: updateInputs,
+  onFinish: updateInputs
+});
+instance = $range.data("ionRangeSlider");
+
+function updateInputs(data) {
+  from = data.from;
+  to = data.to;
+
+  $inputFrom.prop("value", from);
+  $inputTo.prop("value", to);
+}
+
+$inputFrom.on("change", function () {
+  var val = $(this).prop("value");
+
+  // validate
+  if (val < min) {
+    val = min;
+  } else if (val > to) {
+    val = to;
+  }
+
+  instance.update({
+    from: val
+  });
+
+  $(this).prop("value", val);
+
+});
+
+$inputTo.on("change", function () {
+  var val = $(this).prop("value");
+
+  // validate
+  if (val < from) {
+    val = from;
+  } else if (val > max) {
+    val = max;
+  }
+
+  instance.update({
+    to: val
+  });
+
+  $(this).prop("value", val);
+});
 
 
 function show(anything) {
