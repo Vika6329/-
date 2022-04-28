@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,14 +15,13 @@
     <main>
       @include('./common/breadcrambs.html')
       <div class="container">
-        <h1 class="title catalog__title">Каталог товаров</h1>
-      </div>
+        <h2 class="title catalog-title">Каталог товаров</h2>
 
-      <div class=" container catalog-inner">
-        @include('./catalog-page/filter.html')
-        @include('./catalog-page/catalog-content.html')
+        <div class="  catalog-inner">
+          @include('./catalog-page/filter.html')
+          @include('./catalog-page/catalog-content.html')
+        </div>
       </div>
-
       @include('./common/advantages.html')
     </main>
     @include('./common/footer.html')

@@ -1,18 +1,17 @@
 <section class="filter">
 
-<button class="filter__close" type="button"></button>
+<button class="filter__close" type="button">
+  <span class="sr-only">Закрить фильтр</span>
+</button>
 
     <ul class="filter__list">
 
-      <li class="filter__item filter-category">
-        <div class="filter__top">
+      <li class="filter__item filter-category filter-brand">
+        <div class="filter__top filter-category__top">
           <h2 class="filter__title">Категории</h2>
-          <svg class="filter__img" width="10">
-            <use xlink:href="images/sprite.svg#icon-chevron"></use>
-          </svg>
         </div>
 
-        <form class="filter-brand__form filter-category__form filter__form" action="#">
+        <form class="filter-category__form filter__form" action="#">
           <label class="filter-brand__label filter-category__label">
             <input class="filter-brand__input" type="checkbox">
             <span class="filter-brand__text">Овощи и фрукты</span> 
@@ -60,15 +59,12 @@
         </form>
       </li>
 
-      <li class="filter__item filter-brand">
-        <div class="filter__top">
+      <li class="filter__item filter-brand  filter-offers">
+        <div class="filter__top filter-offers__top">
           <h2 class="filter__title">Предложения</h2>
-          <svg class="filter__img" width="10">
-            <use xlink:href="images/sprite.svg#icon-chevron"></use>
-          </svg>
         </div>
 
-        <form class="filter-brand__form filter__form" action="#">
+        <form class=" filter-offers__form filter__form" action="#">
           <label class="filter-brand__label">
             <input class="filter-brand__input" type="checkbox">
             <span class="filter-brand__checkbox"></span>
@@ -88,14 +84,11 @@
       </li>
 
       <li class="filter__item filter-brand">
-        <div class="filter__top">
+        <div class="filter__top filter-brand__top">
           <h2 class="filter__title">Бренд</h2>
-          <svg class="filter__img" width="10">
-            <use xlink:href="images/sprite.svg#icon-chevron"></use>
-          </svg>
         </div>
 
-        <form class="filter-brand__form filter__form" action="#">
+        <form class=" filter__form filter-brand__form" action="#">
           <label class="filter-brand__label">
             <input class="filter-brand__input" type="checkbox">
             <span class="filter-brand__checkbox"></span>
@@ -130,11 +123,8 @@
       </li>
 
       <li class="filter__item filter-price">
-        <div class="filter__top">
+        <div class="filter__top filter-price__top">
           <h2 class="filter__title">Цена</h2>
-          <svg class="filter__img" width="10">
-            <use xlink:href="images/sprite.svg#icon-chevron"></use>
-          </svg>
         </div>
 
         <form class="filter-price__form filter__form" action="#">

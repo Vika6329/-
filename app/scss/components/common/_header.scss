@@ -20,7 +20,7 @@
   &__top-inner {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__content {
@@ -57,7 +57,6 @@
 
 .menu-btn {
   position: relative;
-  right: 10px;
   display: none;
   width: 44px;
   height: 44px;
@@ -68,7 +67,7 @@
   & span {
     height: 2px;
     width: 30px;
-    left: 15px;
+    left: 2px;
     background-color: #fff;
     transition: transform 0.5s;
   }

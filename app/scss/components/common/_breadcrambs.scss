@@ -3,12 +3,16 @@
   padding: 24px 0;
   margin-bottom: 48px;
 
-  @include mq('phone'){
+  @include mq('phone') {
     margin-bottom: 30px;
   }
 
   &__list {
     display: flex;
+
+    @include mq('phone') {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
@@ -25,7 +29,6 @@
       background-image: url('../images/global/chevron.svg');
       width: 6px;
       height: 10px;
-
     }
 
     &:last-child {
@@ -36,5 +39,4 @@
       }
     }
   }
-
 }

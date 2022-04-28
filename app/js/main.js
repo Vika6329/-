@@ -2,8 +2,8 @@ $(function () {
 
   $('.discount__inner').slick({
     infinite: false,
-    prevArrow: '<button type="button" class="slick-prev"> <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-prev"> </use>  </svg><span class="sr-only"> Предыдущий слайд </span></button> ',
-    nextArrow: '<button type="button" class="slick-next">  <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-next"> </use></svg><span class="sr-only"> Следующий слайд </span></button> ',
+    prevArrow: '<button type="button" class="slick-prev"> <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-arrow"> </use>  </svg><span class="sr-only"> Предыдущий слайд </span></button> ',
+    nextArrow: '<button type="button" class="slick-next">  <svg class="discount__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-arrow"> </use></svg><span class="sr-only"> Следующий слайд </span></button> ',
 
     responsive: [{
         breakpoint: 1230,
@@ -24,6 +24,55 @@ $(function () {
       },
     ]
 
+  });
+
+});
+
+$(function () {
+
+  $('.product__slider').slick({
+    infinite: false,
+    prevArrow: '<button type="button" class="slick-prev"> <svg class="product__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-arrow"> </use>  </svg><span class="sr-only"> Предыдущий слайд </span></button> ',
+    nextArrow: '<button type="button" class="slick-next">  <svg class="product__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-arrow"> </use></svg><span class="sr-only"> Следующий слайд </span></button> ',
+
+    responsive: [{
+      breakpoint: 769,
+      settings: {
+        arrows: false,
+        dots: true,
+      }
+    }, ]
+  });
+
+});
+
+$(function () {
+
+  $('.offers__slider').slick({
+    infinite: false,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    prevArrow: '<button type="button" class="slick-prev"> <svg class="offers__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-arrow"> </use>  </svg><span class="sr-only"> Предыдущий слайд </span></button> ',
+    nextArrow: '<button type="button" class="slick-next">  <svg class="offers__arrow" width="80" height="34"> <use xlink: href="images/sprite.svg#icon-arrow"> </use></svg><span class="sr-only"> Следующий слайд </span></button> ',
+
+    responsive: [{
+        breakpoint: 1230,
+        settings: {
+          slidesToShow: 3,
+        }
+      },
+
+      {
+        breakpoint: 769,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplay: false,
+          arrows: false,
+          dots: true,
+        }
+      },
+    ]
   });
 
 });
@@ -60,6 +109,7 @@ $(function () {
   $('.user-nav__link--cart, .cart__button').on('click', function () {
     $('.cart').toggleClass('cart--active')
     $('body').toggleClass('lock')
+    $('body').toggleClass('overlay')
   });
 
   $('.user-nav__item--search').on('click', function () {
@@ -69,7 +119,7 @@ $(function () {
   $('.catalog-content__fil, .filter__close').on('click', function () {
     $('.filter').toggleClass('filter--active')
     $('body').toggleClass('lock')
-    // $('body').toggleClass('overlay')
+    $('body').toggleClass('overlay')
   });
 
   $('.menu-btn, .header-menu__close').on('click', function () {
@@ -80,6 +130,7 @@ $(function () {
 
   $('.catalog__button--menu').on('click', function () {
     $('.catalog--menu').toggleClass('catalog--active')
+    $('.catalog').toggleClass('active')
   })
 
   $('.pagination__prev').on('click', function () {
@@ -91,6 +142,20 @@ $(function () {
     numStars: 1,
     starWidth: "16px",
     rating: "100%",
+  });
+
+  $('.rating__product').rateYo({
+    maxValue: 5,
+    numStars: 5,
+    starWidth: "16px",
+    rating: "80%",
+  });
+
+  $('.rating__product-info').rateYo({
+    maxValue: 5,
+    numStars: 5,
+    starWidth: "16px",
+    rating: "0",
   });
 
   $('.filter-price__input').ionRangeSlider({
@@ -127,6 +192,28 @@ $(function () {
   })
 
   $('.catalog-content__filter-select').styler();
+
+  $('.product-info__link').on('click', function (e) {
+    e.preventDefault();
+    $('.product-info__link').removeClass('product-info__link--active')
+    $(this).addClass('product-info__link--active')
+
+    $('.product-info__tab').removeClass('product-info__tab--active')
+    $($(this).attr('href')).addClass('product-info__tab--active')
+  })
+
+  $('.filter-category__top').on('click', function () {
+    $('.filter-category').toggleClass('filter-category--active')
+  })
+  $('.filter-brand__top').on('click', function () {
+    $('.filter-brand').toggleClass('filter-brand--active')
+  })
+  $('.filter-price__top').on('click', function () {
+    $('.filter-price').toggleClass('filter-price--active')
+  })
+  $('.filter-offers__top').on('click', function () {
+    $('.filter-offers').toggleClass('filter-offers--active')
+  })
 })
 
 var $range = $(".filter-price__input");
@@ -236,7 +323,6 @@ function calcCartPrice() {
 
 
 
-
 window.addEventListener('click', function (event) {
   let counter;
   if (event.target.dataset.action === 'plus' || event.target.dataset.action === 'minus') {
@@ -327,6 +413,8 @@ window.addEventListener('click', function (event) {
   }
 })
 
+
+
 var containerEl1 = document.querySelector('[data-ref="container-1"]');
 var containerEl2 = document.querySelector('[data-ref="container-2"]');
 
@@ -336,5 +424,8 @@ var config = {
   }
 };
 
-var mixer1 = mixitup(containerEl1, config);
-var mixer2 = mixitup(containerEl2, config);
+
+if (containerEl1 && containerEl2) {
+  var mixer1 = mixitup(containerEl1, config);
+  var mixer2 = mixitup(containerEl2, config);
+}

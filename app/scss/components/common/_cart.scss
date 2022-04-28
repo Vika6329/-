@@ -1,8 +1,9 @@
 .cart {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   bottom: 0;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,19 +40,20 @@
 
   &__button {
     position: relative;
-    width: 24px;
-    height: 24px;
+    width: 44px;
+    height: 44px;
 
     &::after,
     &::before {
       @include pseudo;
+      left: 13px;
       height: 2px;
-      width: 100%;
+      width: 24px;
       background-color: $dark-800;
     }
 
     &::before {
-      top: 40%;
+      top: 45%;
       transform: rotate(45deg)
     }
 

@@ -8,13 +8,12 @@
   &::after {
     @include pseudo;
     right: 20px;
-    top: 18px;
+    top: 21px;
     width: 8px;
     height: 8px;
-    border: 2px solid $accent;
-    border-top: 2px solid transparent;
-    border-right: 2px solid transparent;
-    transform: rotate(-45deg);
+    background-color: #7CB238;
+    mask-image: url('../images/sprite.svg#icon-arrow');
+    @extend %mask;
     z-index: 1;
     transition: transform 0.5s;
   }
@@ -25,7 +24,7 @@
     top: 17px;
     width: 25px;
     height: 17px;
-    background-color: #63a60f;
+    background-color: $accent;
     mask-image: url('../images/sprite.svg#icon-nav');
     @extend %mask;
     z-index: 1;
@@ -40,7 +39,7 @@
 
   &.active::after {
     top: 22px;
-    transform: rotate(-225deg);
+    transform: rotate(180deg);
   }
 
   &.active,

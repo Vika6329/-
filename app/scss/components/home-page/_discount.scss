@@ -94,6 +94,11 @@
     z-index: 10;
     transition: box-shadow 0.5s, background-color 0.5s;
 
+    svg {
+      width: 30px;
+      height: 32px;
+    }
+
     &:hover {
       background-color: $green-200;
 
@@ -104,10 +109,6 @@
 
     &:focus {
       box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
-    }
-
-    &.slick-disabled svg {
-      opacity: 0.8;
     }
 
     &:active {
@@ -155,4 +156,43 @@
     }
   }
 
+  // .slick-disabled {
+  //   svg {
+  //     fill: $silver-600;
+  //   }
+  // }
+
+  // .slick-disabled:hover {
+  //   background-color: rgba($white, 0.8);
+
+  //   .discount__arrow {
+  //     fill: $silver-600;
+  //   }
+  // }
+}
+
+.slick-prev {
+  svg {
+    transform: rotate(90deg);
+  }
+}
+
+.slick-next {
+  svg {
+    transform: rotate(-90deg);
+  }
+}
+
+.slick-disabled {
+  svg {
+    fill: $silver-600;
+  }
+}
+
+.slick-disabled:hover {
+  background-color: rgba($white, 0.8);
+
+  .discount__arrow {
+    fill: $silver-600;
+  }
 }

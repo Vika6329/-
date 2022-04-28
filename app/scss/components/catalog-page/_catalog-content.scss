@@ -51,6 +51,17 @@
     background-color: $silver-100;
     width: 47px;
     height: 47px;
+    transition: box-shadow 0.5s;
+
+    &:hover {
+      box-shadow: 0 0 0 3px rgba(99, 166, 14, 0.5);
+      border-radius: 6px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 1px $dark-500;
+      border-radius: 6px;
+    }
 
     &.catalog-content__btn--active svg {
       fill: $accent;
@@ -277,8 +288,8 @@
       padding: 5px;
       margin-right: 0;
 
-      .counter{
-        @include mq('desktop'){
+      .counter {
+        @include mq('desktop') {
           display: none;
         }
       }
@@ -325,12 +336,13 @@
   display: flex;
 }
 
-.catalog__title {
+.catalog-title {
   text-align: inherit;
   font-size: 42px;
   letter-spacing: 0.03em;
   line-height: 1.2;
   margin-bottom: 48px;
+  text-transform: none;
 
   @include mq('phone') {
     font-size: 30px;
@@ -353,6 +365,19 @@
     border-radius: 3px;
   }
 
+  &__prev {
+    transform: rotate(90deg);
+  }
+
+  &__next {
+    transform: rotate(-90deg);
+  }
+
+  &__arrow {
+    height: 13px;
+    width: 13px;
+  }
+
   &__item {
     transition: box-shadow 0.5s;
 
@@ -365,7 +390,7 @@
     }
 
     &:active {
-      box-shadow: inset 0 4px 4px rgba(0, 0, 0, 0.25);
+      box-shadow: inset 0 4px 4px rgba($black, 0.25);
     }
 
     &:nth-child(2),
@@ -385,11 +410,6 @@
       box-shadow: 0 0 0 3px $green-200;
       border-radius: 3px;
     }
-  }
-
-  &__arrow {
-    width: 11px;
-    height: 13px;
   }
 
   &__prev {
