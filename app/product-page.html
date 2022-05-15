@@ -24,7 +24,9 @@
             height="60">
         </a>
   
-        <button class="header-menu__close" type="button"></button>
+        <button class="header-menu__close" type="button">
+          <span class="sr-only">Закрить меню</span>
+        </button>
       </div>
   
       <div class="header-menu__registration">
@@ -138,19 +140,15 @@
 
           <ul class="menu">
             <li class="menu__item">
-              <a href="#">
-                <svg class="menu__img" width="32">
-                  <use xlink:href="images/sprite.svg#icon-address"></use>
-                </svg>
-              </a>
+              <svg class="menu__img" width="32">
+                <use xlink:href="images/sprite.svg#icon-address"></use>
+              </svg>
               <a class="menu__link menu__link--address animation" href="#">АДРЕС И ВРЕМЯ доставки</a>
             </li>
             <li class="menu__item">
-              <a href="tel:+7907288365">
-                <svg class="menu__img" width="22">
-                  <use xlink:href="images/sprite.svg#icon-tel"></use>
-                </svg>
-              </a>
+              <svg class="menu__img" width="22">
+                <use xlink:href="images/sprite.svg#icon-tel"></use>
+              </svg>
               <a class="menu__link menu__link--tel animation" href="tel:+7907288365">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
             </li>
           </ul>
@@ -323,7 +321,7 @@
         </h2>
 
         <div class="badges">
-          <div class="badges__item badges__item--hit ">Хит</div>
+          <span class="badges__item badges__item--hit ">Хит</span>
         </div>
 
         <div class="product__status">
@@ -335,7 +333,7 @@
           </div>
 
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
 
         </div>
@@ -368,10 +366,10 @@
         <div class="product__delivery">
           <h3 class="product__delivery-title">Доставка и оплата</h3>
           <div class="product__descr">
-            <span>Минимальная сумма заказа - 100 руб.</span>
-            <span>Время доставки заказа - 60-120 мин.</span>
-            <span>Оплата осуществляется только банковской картой.</span>
-            <span>Окончательная сумма заказа формируется после сбора товаров.</span>
+            <p>Минимальная сумма заказа - 100 руб.</p>
+            <p>Время доставки заказа - 60-120 мин.</p>
+            <p>Оплата осуществляется только банковской картой.</p>
+            <p>Окончательная сумма заказа формируется после сбора товаров.</p>
           </div>
           <a class="product__link" href="#">Подробнее</a>
         </div>
@@ -395,8 +393,8 @@
         </li>
       </ul>
 
-      <ul class="product-info__tabs">
-        <li class="product-info__tab product-info__tab--active" id="tab-1">
+      <div class="product-info__tabs">
+        <div class="product-info__tab product-info__tab--active" id="tab-1">
           <div class="product-info__descr">
             <p>
               Питахайя – это источник питательных веществ и витаминов. Содержит витамин С, который способствует
@@ -419,8 +417,8 @@
               Внешний вид товара может отличаться от изображений, представленных на сайте.
             </p>
           </div>
-        </li>
-        <li class="product-info__tab" id="tab-2">
+        </div>
+        <div class="product-info__tab" id="tab-2">
           <div class="product-info__character">
             <p class="product-info__character-item">
               Вес: <span>250-350 г;</span>
@@ -441,17 +439,17 @@
               Срок хранения: <span>до 5 дней.</span>
             </p>
           </div>
-        </li>
-        <li class="product-info__tab" id="tab-3">
+        </div>
+        <div class="product-info__tab" id="tab-3">
           <div class="product-info__reviews">
             <h3 class="product-info__reviews-title">МНЕНИЯ НАШИХ клиентов</h3>
 
             <div class="comment">
               <div class="comment__top">
-                <img class="comment__img" src="images/global/comment.jpg" alt="Фото автора комментария">
+                <img class="comment__img" src="images/global/comment.jpg" alt="Фото автора комментария" width="70" height="70">
                 <div class="comment__info">
                   <div class="comment__author">Андрей</div>
-                  <div class="comment__date">10.06.2021</div>
+                  <time class="comment__date" datetime="2021-06-10">10.06.2021</time>
                 </div>
                 <div class="rating">
                   <div class="rating__product"></div>
@@ -465,10 +463,10 @@
 
             <div class="comment">
               <div class="comment__top">
-                <img class="comment__img" src="images/global/comment.jpg" alt="Фото автора комментария">
+                <img class="comment__img" src="images/global/comment.jpg" alt="Фото автора комментария" width="70" height="70">
                 <div class="comment__info">
                   <div class="comment__author">Екатерина Белая</div>
-                  <div class="comment__date">7.06.2021</div>
+                  <time class="comment__date" datetime="2021-06-07">7.06.2021</time>
                 </div>
                 <div class="rating">
                   <div class="rating__product"></div>
@@ -485,48 +483,47 @@
 
           <div class="product-info__comments">
             <h3 class="product-info__reviews-title">ОСТАВИТЬ ОТЗЫВ</h3>
-            <div class="product-info__status">
-              <span>Ваша оценка *</span>
-              <div class="rating">
-                <div class="rating__product-info"></div>
-              </div>
-            </div>
 
             <form class="product-info__form" action="#">
-              <div class="product-info__form-item product-info__form-item--text">
-                <label class="product-info__label" for="text">Ваш отзыв *</label>
-                <textarea class="product-info__input product-info__textarea" name="text" id="text"
-                  placeholder="Введите текст отзыва"></textarea>
-              </div>
-
-              <div class="product-info__inputs">
-                <div class="product-info__form-item product-info__form-item--name">
-                  <label class="product-info__label" for="name"> Имя</label>
-                  <input class="product-info__input" type="text" name="text" id="name" placeholder="Введите ваше имя">
-                </div>
-
-                <div class="product-info__form-item">
-                  <label class="product-info__label" for="mail"> Email *</label>
-                  <input class="product-info__input" type="email" name="email" id="mail"
-                    placeholder="youremail@mail.com">
+              <div class="product-info__status">
+                <span>Ваша оценка *</span>
+                <div class="rating">
+                  <div class="rating__product-info"></div>
                 </div>
               </div>
+              <div class="product-info__labels">
+                <div class="product-info__form-item product-info__form-item--text">
+                  <label class="product-info__label" for="text">Ваш отзыв *</label>
+                  <textarea class="product-info__input product-info__textarea" name="text" id="text"
+                    placeholder="Введите текст отзыва"></textarea>
+                </div>
 
-            </form>
+                <div class="product-info__inputs">
+                  <div class="product-info__form-item product-info__form-item--name">
+                    <label class="product-info__label" for="name"> Имя</label>
+                    <input class="product-info__input" type="text" name="text" id="name" placeholder="Введите ваше имя">
+                  </div>
 
-            <form class="save" action="#">
+                  <div class="product-info__form-item">
+                    <label class="product-info__label" for="mail"> Email *</label>
+                    <input class="product-info__input" type="email" name="email" id="mail"
+                      placeholder="youremail@mail.com">
+                  </div>
+                </div>
+              </div>
               <label class="save__label">
                 <input class="save__input" type="checkbox">
                 <span class="save__checkbox"></span>
-                Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих комментариев.
+                Сохранить моё имя, email и адрес сайта в этом браузере для последующих моих
+                комментариев.
               </label>
             </form>
 
-            <button class="btn" type="button">Оставить отзыв</button>
+            <button class="btn" type="submit">Оставить отзыв</button>
 
           </div>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -537,7 +534,7 @@
       <li class="offers__item">
         <article class="card" data-id="05">
           <div class="badges">
-            <div class="badges__item badges__item--hit ">Хит</div>
+            <span class="badges__item badges__item--hit ">Хит</span>
           </div>
           <button class="card__favorite" type="button">
             <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -560,7 +557,7 @@
 
           <div class="card__status">
             <div class="product-status product-status--available">
-              <p>НЕТ В НАЛИЧИИ</p>
+              <span>НЕТ В НАЛИЧИИ</span>
             </div>
             <div class="rating">
               <span class="rating__num">4.5</span>
@@ -592,7 +589,7 @@
       <li class="offers__item">
         <article class="card" data-id="06">
           <div class="badges">
-            <div class="badges__item badges__item--discount ">-50%</div>
+            <span class="badges__item badges__item--discount ">-50%</span>
           </div>
           <button class="card__favorite" type="button">
             <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -614,7 +611,7 @@
 
           <div class="card__status">
             <div class="product-status product-status--ends">
-              <p>ЗАКАНЧИВАЕТСЯ</p>
+              <span>ЗАКАНЧИВАЕТСЯ</span>
             </div>
             <div class="rating">
               <span class="rating__num">4.5</span>
@@ -651,7 +648,7 @@
       <li class="offers__item">
         <article class="card" data-id="07">
           <div class="badges">
-            <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+            <span class="badges__item badges__item--novetly ">НОВИНКА</span>
           </div>
           <button class="card__favorite" type="button">
             <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -673,7 +670,7 @@
 
           <div class="card__status">
             <div class="product-status product-status--ends">
-              <p>ЗАКАНЧИВАЕТСЯ</p>
+              <span>ЗАКАНЧИВАЕТСЯ</span>
             </div>
             <div class="rating">
               <span class="rating__num">4.5</span>
@@ -705,7 +702,7 @@
       <li class="offers__item">
         <article class="card" data-id="07">
           <div class="badges">
-            <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+            <span class="badges__item badges__item--novetly ">НОВИНКА</span>
           </div>
           <button class="card__favorite" type="button">
             <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -727,7 +724,7 @@
 
           <div class="card__status">
             <div class="product-status product-status--ends">
-              <p>ЗАКАНЧИВАЕТСЯ</p>
+              <span>ЗАКАНЧИВАЕТСЯ</span>
             </div>
             <div class="rating">
               <span class="rating__num">4.5</span>
@@ -759,7 +756,7 @@
       <li class="offers__item">
         <article class="card" data-id="05">
           <div class="badges">
-            <div class="badges__item badges__item--hit ">Хит</div>
+            <span class="badges__item badges__item--hit ">Хит</span>
           </div>
           <button class="card__favorite" type="button">
             <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -783,7 +780,7 @@
           <div class="card__item">
             <div class="card__status">
               <div class="product-status product-status--available">
-                <p>НЕТ В НАЛИЧИИ</p>
+                <span>НЕТ В НАЛИЧИИ</span>
               </div>
               <div class="rating">
                 <span class="rating__num">4.5</span>
@@ -816,7 +813,7 @@
       <li class="offers__item">
         <article class="card" data-id="06">
           <div class="badges">
-            <div class="badges__item badges__item--discount ">-50%</div>
+            <span class="badges__item badges__item--discount ">-50%</span>
           </div>
           <button class="card__favorite" type="button">
             <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -839,7 +836,7 @@
           <div class="card__item">
             <div class="card__status">
               <div class="product-status product-status--stock">
-                <p>В НАЛИЧИИ</p>
+                <span>В НАЛИЧИИ</span>
               </div>
               <div class="rating">
                 <span class="rating__num">4.5</span>
@@ -874,118 +871,6 @@
         </article>
       </li>
 
-      <!-- <li class="offers__item">
-        <article class="card" data-id="07">
-          <div class="badges">
-            <div class="badges__item badges__item--novetly ">НОВИНКА</div>
-          </div>
-          <button class="card__favorite" type="button">
-            <svg class="card__favorite-img" width="32" fill="#C1C1C1">
-              <use xlink:href="images/sprite.svg#icon-heart"></use>
-            </svg>
-            <span class="sr-only">Добавить в понравившиеся</span>
-          </button>
-          <div class="card__box">
-            <a class="card__box-link" href="#">
-              <img class="card__img" src="images/cards/coffee.png" alt="Кофе">
-            </a>
-            <a class="card__link">
-              <svg class="card__cart" width="20">
-                <use xlink:href="images/sprite.svg#icon-search"></use>
-              </svg>
-              <span class="sr-only">Подробнее о товаре</span>
-            </a>
-          </div>
-
-          <div class="card__item">
-            <div class="card__status">
-              <div class="product-status product-status--ends">
-                <p>ЗАКАНЧИВАЕТСЯ</p>
-              </div>
-              <div class="rating">
-                <span class="rating__num">4.5</span>
-                <div class="rating__star"></div>
-              </div>
-            </div>
-
-            <a class="card__name" href="#">
-              <h3 class="card__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
-            </a>
-
-            <div class="card__bottom">
-              <span class="card__price price">877 <span>₽</span> </span>
-              <div class="counter">
-                <div class="counter__control" data-action="minus">-</div>
-                <div class="counter__current" data-counter>1</div>
-                <div class="counter__control counter__control--plus" data-action="plus">+</div>
-              </div>
-              <button class="btn card__btn" type="button" data-cart>
-                <svg class="card__btn-img" width=" 16">
-                  <use xlink:href="images/sprite.svg#icon-basket"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
-              </button>
-            </div>
-          </div>
-        </article>
-      </li>
-
-      <li class="offers__item">
-        <article class="card" data-id="07">
-          <div class="badges">
-            <div class="badges__item badges__item--novetly ">НОВИНКА</div>
-          </div>
-          <button class="card__favorite" type="button">
-            <svg class="card__favorite-img" width="32" fill="#C1C1C1">
-              <use xlink:href="images/sprite.svg#icon-heart"></use>
-            </svg>
-            <span class="sr-only">Добавить в понравившиеся</span>
-          </button>
-          <div class="card__box">
-            <a class="card__box-link" href="#">
-              <img class="card__img" src="images/cards/coffee.png" alt="Кофе">
-            </a>
-            <a class="card__link">
-              <svg class="card__cart" width="20">
-                <use xlink:href="images/sprite.svg#icon-search"></use>
-              </svg>
-              <span class="sr-only">Подробнее о товаре</span>
-            </a>
-          </div>
-
-          <div class="card__item">
-            <div class="card__status">
-              <div class="product-status product-status--ends">
-                <p>ЗАКАНЧИВАЕТСЯ</p>
-              </div>
-              <div class="rating">
-                <span class="rating__num">4.5</span>
-                <div class="rating__star"></div>
-              </div>
-            </div>
-
-            <a class="card__name" href="#">
-              <h3 class="card__title">Кофе с коноплей органический Caffé Salomoni 250г</h3>
-            </a>
-
-            <div class="card__bottom">
-              <span class="card__price price">877 <span>₽</span> </span>
-              <div class="counter">
-                <div class="counter__control" data-action="minus">-</div>
-                <div class="counter__current" data-counter>1</div>
-                <div class="counter__control counter__control--plus" data-action="plus">+</div>
-              </div>
-              <button class="btn card__btn" type="button" data-cart>
-                <svg class="card__btn-img" width=" 16">
-                  <use xlink:href="images/sprite.svg#icon-basket"></use>
-                </svg>
-                <span class="sr-only">Добавить в корзину</span>
-              </button>
-            </div>
-          </div>
-        </article>
-      </li> -->
-
     </ul>
   </div>
 </section>
@@ -1009,45 +894,49 @@
         </div>
       </div>
 
-      <div class="footer__list">
-        <ul class="footer-menu">
 
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">О нас</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Контакты</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Публичная оферта</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Оплата и доставка</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Вакансии</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Акции</a>
-          </li>
+      <ul class="footer-menu">
 
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Отзывы</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Новости</a>
-          </li>
-        </ul>
-      </div>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">О нас</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Контакты</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Публичная оферта</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Оплата и доставка</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Вакансии</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Акции</a>
+        </li>
+
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Отзывы</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Новости</a>
+        </li>
+      </ul>
+
 
       <div class="footer-contact">
-        <div class="footer-contact__contacts">
-          <a class="footer-contact__link animation" href="tel:+7907288365">Горячая линия+7 907
-            288
-            365</a>
+        <ul class="footer-contact__contacts">
+          <li>
+            <a class="footer-contact__link animation" href="tel:+7907288365">Горячая линия+7 907
+              288
+              365</a>
+          </li>
 
-          <a class="footer-contact__link animation" href="#">Санкт-Петербург, ул. Ленина,
-            1</a>
+          <li>
+            <a class="footer-contact__link animation" href="#">Санкт-Петербург, ул. Ленина,
+              1</a>
+          </li>
 
           <ul class="social">
             <li class="social__item">
@@ -1084,7 +973,7 @@
             </li>
           </ul>
 
-        </div>
+        </ul>
       </div>
     </div>
 
@@ -1095,10 +984,14 @@
     <div class="container">
       <div class="footer-bottom">
         <span class="footer-bottom__copy">© 2021 ФРЕШОК</span>
-        <div class="payment">
-          <img class="payment__img" src="images/global/visa.svg" alt="Visa">
-          <img class="payment__img" src="images/global/mc.svg" alt="MasterCard">
-        </div>
+        <ul class="payment">
+          <li>
+            <img class="payment__img" src="images/global/visa.svg" alt="Visa">
+          </li>
+          <li>
+            <img class="payment__img" src="images/global/mc.svg" alt="MasterCard">
+          </li>
+        </ul>
       </div>
     </div>
   </div>

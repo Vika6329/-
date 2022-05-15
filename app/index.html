@@ -23,7 +23,9 @@
             height="60">
         </a>
   
-        <button class="header-menu__close" type="button"></button>
+        <button class="header-menu__close" type="button">
+          <span class="sr-only">Закрить меню</span>
+        </button>
       </div>
   
       <div class="header-menu__registration">
@@ -137,19 +139,15 @@
 
           <ul class="menu">
             <li class="menu__item">
-              <a href="#">
-                <svg class="menu__img" width="32">
-                  <use xlink:href="images/sprite.svg#icon-address"></use>
-                </svg>
-              </a>
+              <svg class="menu__img" width="32">
+                <use xlink:href="images/sprite.svg#icon-address"></use>
+              </svg>
               <a class="menu__link menu__link--address animation" href="#">АДРЕС И ВРЕМЯ доставки</a>
             </li>
             <li class="menu__item">
-              <a href="tel:+7907288365">
-                <svg class="menu__img" width="22">
-                  <use xlink:href="images/sprite.svg#icon-tel"></use>
-                </svg>
-              </a>
+              <svg class="menu__img" width="22">
+                <use xlink:href="images/sprite.svg#icon-tel"></use>
+              </svg>
               <a class="menu__link menu__link--tel animation" href="tel:+7907288365">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
             </li>
           </ul>
@@ -384,8 +382,8 @@
               <li class="products__item mix category-a">
                 <article class="card" data-id="01">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
-                    <div class="badges__item badges__item--discount">-50%</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
+                    <span class="badges__item badges__item--discount">-50%</span>
                   </div>
                   <button class="card__favorite" type="button">
                     <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -478,7 +476,7 @@
               <li class="products__item mix category-a">
                 <article class="card " data-id="03">
                   <div class="badges">
-                    <div class="badges__item badges__item--hit ">Хит</div>
+                    <span class="badges__item badges__item--hit ">Хит</span>
                   </div>
                   <button class="card__favorite" type="button">
                     <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -562,7 +560,7 @@
               <li class="products__item mix category-b">
                 <article class="card" data-id="05">
                   <div class="badges">
-                    <div class="badges__item badges__item--hit ">Хит</div>
+                    <span class="badges__item badges__item--hit ">Хит</span>
                   </div>
                   <button class="card__favorite" type="button">
                     <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -607,7 +605,7 @@
               <li class="products__item mix category-c">
                 <article class="card" data-id="06">
                   <div class="badges">
-                    <div class="badges__item badges__item--discount ">-50%</div>
+                    <span class="badges__item badges__item--discount ">-50%</span>
                   </div>
                   <button class="card__favorite" type="button">
                     <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -656,7 +654,7 @@
               <li class="products__item mix category-c">
                 <article class="card" data-id="07">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
                   <button class="card__favorite" type="button">
                     <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -700,7 +698,7 @@
               <li class="products__item mix category-b">
                 <article class="card" data-id="08">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
                   <button class="card__favorite" type="button">
                     <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -801,7 +799,7 @@
               <li class="promotions__product mix category-a">
                 <article class="card promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -817,7 +815,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--stock">
-                        <p>В НАЛИЧИИ</p>
+                        <span>В НАЛИЧИИ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -839,7 +837,7 @@
               <li class="promotions__product mix category-a">
                 <article class="card  promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -855,7 +853,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--ends">
-                        <p>ЗАКАНЧИВАЕТСЯ</p>
+                        <span>ЗАКАНЧИВАЕТСЯ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -877,7 +875,7 @@
               <li class="promotions__product mix category-a">
                 <article class="card  promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -893,7 +891,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--available">
-                        <p>НЕТ В НАЛИЧИИ</p>
+                        <span>НЕТ В НАЛИЧИИ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -916,7 +914,7 @@
               <li class="promotions__product mix category-a">
                 <article class="card promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -931,7 +929,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--stock">
-                        <p> В НАЛИЧИИ</p>
+                        <span> В НАЛИЧИИ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -953,7 +951,7 @@
               <li class="promotions__product mix category-a">
                 <article class="card promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+                    <span class="badges__item badges__item--novetly ">НОВИНКА</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -968,7 +966,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--stock">
-                        <p> В НАЛИЧИИ</p>
+                        <span> В НАЛИЧИИ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -990,7 +988,7 @@
               <li class="promotions__product mix category-b">
                 <article class="card  promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--hit ">Хит</div>
+                    <span class="badges__item badges__item--hit ">Хит</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -1006,7 +1004,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--ends">
-                        <p> ЗАКАНЧИВАЕТСЯ</p>
+                        <span> ЗАКАНЧИВАЕТСЯ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -1028,7 +1026,7 @@
               <li class="promotions__product mix category-b">
                 <article class="card  promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--hit ">Хит</div>
+                    <span class="badges__item badges__item--hit ">Хит</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -1044,7 +1042,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--stock">
-                        <p> В НАЛИЧИИ</p>
+                        <span> В НАЛИЧИИ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -1066,7 +1064,7 @@
               <li class="promotions__product mix category-b">
                 <article class="card  promotions__card">
                   <div class="badges">
-                    <div class="badges__item badges__item--hit ">Хит</div>
+                    <span class="badges__item badges__item--hit ">Хит</span>
                   </div>
 
                   <div class=" promotions__box">
@@ -1082,7 +1080,7 @@
                     <div class="card__bottom promotions__bottom">
 
                       <div class="product-status product-status--stock">
-                        <p> В НАЛИЧИИ</p>
+                        <span> В НАЛИЧИИ</span>
                       </div>
 
                       <div class="promotions__prices">
@@ -1100,7 +1098,6 @@
                   </div>
                 </article>
               </li>
-
 
             </ul>
           </div>
@@ -1201,7 +1198,7 @@
               <article class="news-card">
                 <a class="news-card__link" href="#">
                   <div class="news-card__box">
-                    <img class="news-card__img" src="images/news/strawberry.jpg" alt="Клубника">
+                    <img class="news-card__img" src="images/news/strawberry.jpg" alt="Клубника" width="410" height="240">
                     <div class="news-card__date">
                       <time class="news-card__time" datetime="2022-07-15">ИЮЛЬ </time>
                       <span class="news-card__num">15</span>
@@ -1220,7 +1217,7 @@
               <article class="news-card">
                 <a class="news-card__link" href="#">
                   <div class="news-card__box">
-                    <img class="news-card__img" src="images/news/mango.jpg" alt="Манго">
+                    <img class="news-card__img" src="images/news/mango.jpg" alt="Манго" width="410" height="240">
                     <div class="news-card__date">
                       <time class="news-card__time" datetime="2022-05-07">МАЙ </time>
                       <span class="news-card__num">07</span>
@@ -1237,7 +1234,7 @@
               <article class="news-card">
                 <a class="news-card__link" href="#">
                   <div class="news-card__box">
-                    <img class="news-card__img" src="images/news/papaya.png" alt="Папайя">
+                    <img class="news-card__img" src="images/news/papaya.png" alt="Папайя" width="410" height="240">
                     <div class="news-card__date">
                       <time class="news-card__time" datetime="2022-02-20">ФЕВРАЛЬ</time>
                       <span class="news-card__num">20</span>
@@ -1271,45 +1268,49 @@
         </div>
       </div>
 
-      <div class="footer__list">
-        <ul class="footer-menu">
 
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">О нас</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Контакты</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Публичная оферта</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Оплата и доставка</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Вакансии</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Акции</a>
-          </li>
+      <ul class="footer-menu">
 
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Отзывы</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Новости</a>
-          </li>
-        </ul>
-      </div>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">О нас</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Контакты</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Публичная оферта</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Оплата и доставка</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Вакансии</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Акции</a>
+        </li>
+
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Отзывы</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Новости</a>
+        </li>
+      </ul>
+
 
       <div class="footer-contact">
-        <div class="footer-contact__contacts">
-          <a class="footer-contact__link animation" href="tel:+7907288365">Горячая линия+7 907
-            288
-            365</a>
+        <ul class="footer-contact__contacts">
+          <li>
+            <a class="footer-contact__link animation" href="tel:+7907288365">Горячая линия+7 907
+              288
+              365</a>
+          </li>
 
-          <a class="footer-contact__link animation" href="#">Санкт-Петербург, ул. Ленина,
-            1</a>
+          <li>
+            <a class="footer-contact__link animation" href="#">Санкт-Петербург, ул. Ленина,
+              1</a>
+          </li>
 
           <ul class="social">
             <li class="social__item">
@@ -1346,7 +1347,7 @@
             </li>
           </ul>
 
-        </div>
+        </ul>
       </div>
     </div>
 
@@ -1357,10 +1358,14 @@
     <div class="container">
       <div class="footer-bottom">
         <span class="footer-bottom__copy">© 2021 ФРЕШОК</span>
-        <div class="payment">
-          <img class="payment__img" src="images/global/visa.svg" alt="Visa">
-          <img class="payment__img" src="images/global/mc.svg" alt="MasterCard">
-        </div>
+        <ul class="payment">
+          <li>
+            <img class="payment__img" src="images/global/visa.svg" alt="Visa">
+          </li>
+          <li>
+            <img class="payment__img" src="images/global/mc.svg" alt="MasterCard">
+          </li>
+        </ul>
       </div>
     </div>
   </div>

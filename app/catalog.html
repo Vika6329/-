@@ -24,7 +24,9 @@
             height="60">
         </a>
   
-        <button class="header-menu__close" type="button"></button>
+        <button class="header-menu__close" type="button">
+          <span class="sr-only">Закрить меню</span>
+        </button>
       </div>
   
       <div class="header-menu__registration">
@@ -138,19 +140,15 @@
 
           <ul class="menu">
             <li class="menu__item">
-              <a href="#">
-                <svg class="menu__img" width="32">
-                  <use xlink:href="images/sprite.svg#icon-address"></use>
-                </svg>
-              </a>
+              <svg class="menu__img" width="32">
+                <use xlink:href="images/sprite.svg#icon-address"></use>
+              </svg>
               <a class="menu__link menu__link--address animation" href="#">АДРЕС И ВРЕМЯ доставки</a>
             </li>
             <li class="menu__item">
-              <a href="tel:+7907288365">
-                <svg class="menu__img" width="22">
-                  <use xlink:href="images/sprite.svg#icon-tel"></use>
-                </svg>
-              </a>
+              <svg class="menu__img" width="22">
+                <use xlink:href="images/sprite.svg#icon-tel"></use>
+              </svg>
               <a class="menu__link menu__link--tel animation" href="tel:+7907288365">ГОРЯЧАЯ ЛИНИЯ 24/7</a>
             </li>
           </ul>
@@ -485,8 +483,8 @@
 
     <article class="card " data-id="09">
       <div class="badges">
-        <div class="badges__item badges__item--novetly ">НОВИНКА</div>
-        <div class="badges__item badges__item--discount">-50%</div>
+        <span class="badges__item badges__item--novetly ">НОВИНКА</span>
+        <span class="badges__item badges__item--discount">-50%</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -510,7 +508,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">3.5</span>
@@ -566,7 +564,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -598,7 +596,7 @@
 
     <article class="card " data-id="03">
       <div class="badges">
-        <div class="badges__item badges__item--hit ">Хит</div>
+        <span class="badges__item badges__item--hit ">Хит</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -622,7 +620,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -652,7 +650,7 @@
 
     <article class="card" data-id="05">
       <div class="badges">
-        <div class="badges__item badges__item--hit ">Хит</div>
+        <span class="badges__item badges__item--hit ">Хит</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -676,7 +674,7 @@
         <div class="card__item">
           <div class="card__status">
             <div class="product-status product-status--available">
-              <p>НЕТ В НАЛИЧИИ</p>
+              <span>НЕТ В НАЛИЧИИ</span>
             </div>
             <div class="rating">
               <span class="rating__num">4.5</span>
@@ -707,7 +705,7 @@
 
     <article class="card" data-id="06">
       <div class="badges">
-        <div class="badges__item badges__item--discount ">-50%</div>
+        <span class="badges__item badges__item--discount ">-50%</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -730,7 +728,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -766,7 +764,7 @@
 
     <article class="card" data-id="07">
       <div class="badges">
-        <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+        <span class="badges__item badges__item--novetly ">НОВИНКА</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -789,7 +787,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--ends">
-            <p>ЗАКАНЧИВАЕТСЯ</p>
+            <span>ЗАКАНЧИВАЕТСЯ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -820,7 +818,7 @@
 
     <article class="card" data-id="08">
       <div class="badges">
-        <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+        <span class="badges__item badges__item--novetly ">НОВИНКА</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -843,7 +841,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--ends">
-            <p>ЗАКАНЧИВАЕТСЯ</p>
+            <span>ЗАКАНЧИВАЕТСЯ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -894,7 +892,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -924,8 +922,8 @@
 
     <article class="card" data-id="01">
       <div class="badges">
-        <div class="badges__item badges__item--novetly ">НОВИНКА</div>
-        <div class="badges__item badges__item--discount">-50%</div>
+        <span class="badges__item badges__item--novetly ">НОВИНКА</span>
+        <span class="badges__item badges__item--discount">-50%</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -949,7 +947,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -985,7 +983,7 @@
 
     <article class="card" data-id="05">
       <div class="badges">
-        <div class="badges__item badges__item--hit ">Хит</div>
+        <span class="badges__item badges__item--hit ">Хит</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -1009,7 +1007,7 @@
         <div class="card__item">
           <div class="card__status">
             <div class="product-status product-status--ends">
-              <p>ЗАКАНЧИВАЕТСЯ</p>
+              <span>ЗАКАНЧИВАЕТСЯ</span>
             </div>
             <div class="rating">
               <span class="rating__num">4.5</span>
@@ -1040,7 +1038,7 @@
 
     <article class="card" data-id="06">
       <div class="badges">
-        <div class="badges__item badges__item--discount ">-50%</div>
+        <span class="badges__item badges__item--discount ">-50%</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -1063,7 +1061,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--stock">
-            <p>В НАЛИЧИИ</p>
+            <span>В НАЛИЧИИ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -1099,7 +1097,7 @@
 
     <article class="card" data-id="07">
       <div class="badges">
-        <div class="badges__item badges__item--novetly ">НОВИНКА</div>
+        <span class="badges__item badges__item--novetly ">НОВИНКА</span>
       </div>
       <button class="card__favorite" type="button">
         <svg class="card__favorite-img" width="32" fill="#C1C1C1">
@@ -1122,7 +1120,7 @@
       <div class="card__item">
         <div class="card__status">
           <div class="product-status product-status--ends">
-            <p>ЗАКАНЧИВАЕТСЯ</p>
+            <span>ЗАКАНЧИВАЕТСЯ</span>
           </div>
           <div class="rating">
             <span class="rating__num">4.5</span>
@@ -1238,45 +1236,49 @@
         </div>
       </div>
 
-      <div class="footer__list">
-        <ul class="footer-menu">
 
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">О нас</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Контакты</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Публичная оферта</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Оплата и доставка</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Вакансии</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Акции</a>
-          </li>
+      <ul class="footer-menu">
 
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Отзывы</a>
-          </li>
-          <li class="footer-menu__item">
-            <a class="footer-menu__link animation" href="#">Новости</a>
-          </li>
-        </ul>
-      </div>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">О нас</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Контакты</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Публичная оферта</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Оплата и доставка</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Вакансии</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Акции</a>
+        </li>
+
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Отзывы</a>
+        </li>
+        <li class="footer-menu__item">
+          <a class="footer-menu__link animation" href="#">Новости</a>
+        </li>
+      </ul>
+
 
       <div class="footer-contact">
-        <div class="footer-contact__contacts">
-          <a class="footer-contact__link animation" href="tel:+7907288365">Горячая линия+7 907
-            288
-            365</a>
+        <ul class="footer-contact__contacts">
+          <li>
+            <a class="footer-contact__link animation" href="tel:+7907288365">Горячая линия+7 907
+              288
+              365</a>
+          </li>
 
-          <a class="footer-contact__link animation" href="#">Санкт-Петербург, ул. Ленина,
-            1</a>
+          <li>
+            <a class="footer-contact__link animation" href="#">Санкт-Петербург, ул. Ленина,
+              1</a>
+          </li>
 
           <ul class="social">
             <li class="social__item">
@@ -1313,7 +1315,7 @@
             </li>
           </ul>
 
-        </div>
+        </ul>
       </div>
     </div>
 
@@ -1324,10 +1326,14 @@
     <div class="container">
       <div class="footer-bottom">
         <span class="footer-bottom__copy">© 2021 ФРЕШОК</span>
-        <div class="payment">
-          <img class="payment__img" src="images/global/visa.svg" alt="Visa">
-          <img class="payment__img" src="images/global/mc.svg" alt="MasterCard">
-        </div>
+        <ul class="payment">
+          <li>
+            <img class="payment__img" src="images/global/visa.svg" alt="Visa">
+          </li>
+          <li>
+            <img class="payment__img" src="images/global/mc.svg" alt="MasterCard">
+          </li>
+        </ul>
       </div>
     </div>
   </div>

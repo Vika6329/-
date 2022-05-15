@@ -130,11 +130,21 @@
   &__form {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
     margin-bottom: 26px;
 
     @include mq('phone') {
       margin-bottom: 18px;
       flex-wrap: wrap;
+    }
+  }
+
+  &__labels {
+    display: flex;
+    margin-bottom: 24px;
+
+    @include mq('phone') {
+      flex-direction: column;
     }
   }
 
@@ -197,7 +207,7 @@
       width: 100%;
       max-width: 400px;
 
-      @include mq('phone'){
+      @include mq('phone') {
         margin-right: 0;
         max-width: 100%;
       }

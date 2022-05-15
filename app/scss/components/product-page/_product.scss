@@ -2,6 +2,7 @@
 
   &__top {
     display: flex;
+    align-items: center;
     margin-bottom: 63px;
 
     @include mq('tablet-2') {
@@ -220,7 +221,6 @@
   }
 
   &__content {
-    padding-top: 21px;
     width: 100%;
   }
 

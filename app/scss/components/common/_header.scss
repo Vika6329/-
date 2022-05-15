@@ -21,6 +21,10 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+
+    @include mq('tablet-2') {
+      align-items: center;
+    }
   }
 
   &__content {
@@ -116,7 +120,7 @@
     transform: translateX(0);
   }
 
-  .header__logo{
+  .header__logo {
     max-width: 100%;
     margin-right: 0;
   }

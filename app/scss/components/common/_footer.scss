@@ -80,30 +80,11 @@
     text-transform: uppercase;
   }
 
-  &__list {
-    margin: 0;
-
-    @include mq('tablet-2') {
-      width: 100%;
-      border-bottom: 1px solid rgba($white, 0.1);
-      margin-bottom: 25px;
-      padding-bottom: 25px;
-    }
-
-    @include mq('tablet') {
-      margin-bottom: 25px;
-    }
-
-    @include mq('phone') {
-      padding: 25px 15px;
-      border-top: 1px solid rgba($white, 0.1);
-    }
-  }
-
   &__email {
-    margin: 0;
+    margin: 0 95px 0 0;
 
     @include mq('phone') {
+      margin: 0;
       display: flex;
       justify-content: center;
       width: 100%;
@@ -185,6 +166,10 @@
   @include mq('tablet-2') {
     column-count: 3;
     column-gap: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgba($white, 0.1);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
   }
 
   @include mq('tablet') {
@@ -197,6 +182,9 @@
     column-gap: 50px;
     width: fit-content;
     margin: auto;
+    margin-bottom: 25px;
+    padding: 25px 0;
+    border-top: 1px solid rgba($white, 0.1);
   }
 
   &__item {
