@@ -1,0 +1,50 @@
+.products-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  margin-right: -25px;
+
+  @include mq('phone') {
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 25px;
+
+      @include mq('phone') {
+        margin-right: 30px;
+      }
+    }
+
+    .mixitup-control-active {
+      border-bottom: 3px solid rgba(99, 166, 14, 0.2);
+    }
+
+    @include mq('phone') {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn {
+    font-weight: 700;
+    font-size: 15px;
+    color: $dark-500;
+    text-transform: uppercase;
+    border-radius: 3px;
+    transition: box-shadow 0.5s, color 0.5s, border 0.5s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 3px #E0EDCF;
+    }
+
+    @include mq('phone') {
+      font-size: 14px;
+    }
+  }
+}

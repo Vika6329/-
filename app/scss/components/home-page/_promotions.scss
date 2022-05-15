@@ -1,0 +1,179 @@
+.promotions {
+  background-color: $silver-100;
+
+  &__products {
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 50px;
+
+    @include mq('desktop') {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include mq('tablet-2') {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 10px;
+    }
+
+    @include mq('phone') {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .card__title {
+    @include mq('phone') {
+      padding: 0 0 0 12px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: flex;
+    font-size: 18px;
+  }
+
+  &__card {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 11px 11px 9px;
+    border-radius: 6px;
+    line-height: 1;
+    background-color: $white;
+  }
+
+  &__box {
+    margin: 0 12px 0 0;
+    width: 45%;
+
+    @include mq('tablet') {
+      margin: 0;
+    }
+  }
+
+  &__bottom {
+    display: block;
+  }
+
+  .card__bottom {
+    padding: 0;
+
+    @include mq('tablet') {
+      padding: 0 0 0 12px;
+    }
+  }
+
+  .card__title {
+    padding: 0;
+
+    @include mq('tablet') {
+      padding: 0 0 0 12px;
+    }
+  }
+
+  &__prices {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__price {
+    display: block;
+    font-size: 12px;
+    letter-spacing: 0.03em;
+
+    &--new {
+      font-size: 20px;
+      margin-right: 12px;
+      font-weight: 600;
+      color: $dark-500;
+    }
+
+    &--old {
+      position: relative;
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 400;
+      color: $silver-600;
+
+      &::before {
+        @include pseudo;
+        bottom: 6px;
+        height: 1px;
+        width: 100%;
+        transform: rotate(-15deg);
+        background-color: $silver-600;
+      }
+    }
+  }
+
+  .card__prices {
+    display: flex;
+    align-items: end;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    height: 101px;
+    max-width: 170px;
+    width: 100%;
+
+    @include mq('desktop') {
+      max-width: 100%;
+    }
+  }
+
+  .card__name {
+    margin-bottom: 0;
+  }
+
+  &__name {
+    letter-spacing: 0.03em;
+  }
+
+  @include mq('tablet-2') {
+    justify-content: space-around;
+  }
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+
+  &__num {
+    font-weight: 700;
+    line-height: 1;
+
+    @include mq('phone') {
+      font-size: 10px;
+    }
+  }
+}
+
+.product-status {
+  margin-top: auto;
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+
+  &--stock {
+    color: $accent;
+  }
+
+  &--ends {
+    color: $red;
+  }
+
+  &--available {
+    color: $silver-600;
+  }
+
+  @include mq('phone') {
+    font-size: 8px;
+    line-height: 1;
+    letter-spacing: 0.03em;
+  }
+}

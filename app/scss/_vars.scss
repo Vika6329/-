@@ -1,0 +1,53 @@
+$default: #121212;
+$accent: #63A60F;
+$yellow: #FFB800;
+$orange: #FF7A00;
+$red: #CF3E3B;
+$white: #FFFFFF;
+$black: #000000;
+$silver-100: #F6F6F6;
+$silver-600: #C1C1C1;
+$green-200: #E0EDCF;
+$green-100: #EFF6E7;
+$dark-800: #31352B;
+$dark-500: #505050;
+
+%ruda-400 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 400;
+}
+
+%ruda-600 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 600;
+}
+
+%ruda-700 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 700;
+}
+
+%ruda-900 {
+  font-family: 'Ruda', sans-serif;
+  font-weight: 900;
+}
+
+%bg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+%mask {
+  mask-repeat: no-repeat;
+  mask-size: cover;
+  mask-position: center;
+}
+
+%checkbox-hidden{
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+}

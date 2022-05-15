@@ -1,7 +1,46 @@
- @import 'vars';
 @import 'fonts';
-@import 'reset';
+@import 'vars';
+@import 'libs';
+@import 'mixins';
 @import 'global';
 
+@import 'components/common/_header';
+@import 'components/common/_user-nav';
+@import 'components/common/_catalog';
+@import 'components/common/_form';
+@import 'components/common/_menu';
+@import 'components/common/_footer';
+@import 'components/common/_social';
+@import 'components/common/_advantages';
+@import 'components/common/_card';
+@import 'components/common/_cart';
+@import 'components/common/_badges';
+@import 'components/common/_breadcrambs';
+@import 'components/common/_news-card';
+@import 'components/common/_counter';
 
-@import 'media';
+
+@import 'components/home-page/_discount';
+@import 'components/home-page/_banners';
+@import 'components/home-page/_news';
+@import 'components/home-page/_brands';
+@import 'components/home-page/_products-filter';
+@import 'components/home-page/_products';
+@import 'components/home-page/_promotions';
+
+
+@import 'components/catalog-page/_filter';
+@import 'components/catalog-page/_catalog-content';
+
+
+@import 'components/product-page/_product';
+@import 'components/product-page/_offers';
+@import 'components/product-page/_product-info';
+
+
+
+
+
+
+
+

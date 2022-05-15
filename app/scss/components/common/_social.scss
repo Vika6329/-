@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+
+  &__item {
+    transition: box-shadow 0.5s, opacity 0.5s;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:focus-within {
+      box-shadow: 0 0 0 3px #E0EDCF;
+    }
+  }
+
+  &__img {
+    height: 32px;
+    transition: fill 0.5s;
+    fill: $white;
+
+    &:active {
+      fill: $green-200;
+    }
+  }
+
+}

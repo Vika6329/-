@@ -1,0 +1,96 @@
+.advantages {
+  background-color: $silver-100;
+  padding: 48px 0 29px;
+
+  @include mq('phone') {
+    padding: 30px 0;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+
+    @include mq('phone') {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 265px;
+    width: 100%;
+    padding-left: 75px;
+
+    @include mq('tablet') {
+      padding: 65px 0 0;
+    }
+
+    @include mq('phone') {
+      max-width: 100%;
+      padding: 0 0 0 75px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 65px;
+
+      @include mq('tablet-2') {
+        margin-right: 40px;
+      }
+
+      @include mq('tablet-2') {
+        margin-right: 30px;
+      }
+
+      @include mq('phone') {
+        margin: 0 0 30px;
+      }
+    }
+
+    &::before {
+      @include pseudo;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-color: #63a60f;
+      z-index: 1;
+      @extend %mask;
+
+      @include mq('tablet') {
+        top: 0;
+      }
+    }
+
+    &--moto {
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-moto');
+      }
+    }
+
+    &--box {
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-box');
+      }
+    }
+
+    &--hour {
+      &::before {
+        mask-image: url('../images/sprite.svg#icon-hour');
+      }
+    }
+  }
+
+  &__title {
+    font-size: 16px;
+    margin-bottom: 6px;
+
+    @include mq('phone') {
+      font-weight: 600;
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    color: $dark-500;
+    @include line-clamp(3);
+  }
+}

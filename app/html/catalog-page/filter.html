@@ -1,0 +1,148 @@
+<section class="filter">
+
+<button class="filter__close" type="button">
+  <span class="sr-only">Закрить фильтр</span>
+</button>
+
+    <ul class="filter__list">
+
+      <li class="filter__item filter-category filter-brand">
+        <div class="filter__top filter-category__top">
+          <h2 class="filter__title">Категории</h2>
+        </div>
+
+        <form class="filter-category__form filter__form" action="#">
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text">Овощи и фрукты</span> 
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Бакалея</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Молочные продукты</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Хлеб</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Мясо</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Колбаса</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Рыба</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Алкоголь</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Напитки</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Торты</span>
+          </label>
+          <label class="filter-brand__label filter-category__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__text"> Чай, кофе</span>
+          </label>
+        </form>
+      </li>
+
+      <li class="filter__item filter-brand  filter-offers">
+        <div class="filter__top filter-offers__top">
+          <h2 class="filter__title">Предложения</h2>
+        </div>
+
+        <form class=" filter-offers__form filter__form" action="#">
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Со скидкой
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Новинка
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Хит
+          </label>
+        </form>
+      </li>
+
+      <li class="filter__item filter-brand">
+        <div class="filter__top filter-brand__top">
+          <h2 class="filter__title">Бренд</h2>
+        </div>
+
+        <form class=" filter__form filter-brand__form" action="#">
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            CocaCola
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Pepsi
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Sprite
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Fanta
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            RedBull
+          </label>
+          <label class="filter-brand__label">
+            <input class="filter-brand__input" type="checkbox">
+            <span class="filter-brand__checkbox"></span>
+            Dr Pepper
+          </label>
+        </form>
+      </li>
+
+      <li class="filter__item filter-price">
+        <div class="filter__top filter-price__top">
+          <h2 class="filter__title">Цена</h2>
+        </div>
+
+        <form class="filter-price__form filter__form" action="#">
+          <ul class="filter-price__prices">
+            <li class="filter-price__value">от
+              <input class="filter-price__num filter-price__from" type="text">
+              <span>₽</span>
+            </li>
+            <li class="filter-price__value">до
+              <input class="filter-price__num filter-price__to" type="text">
+              <span>₽</span>
+            </li>
+          </ul>
+          <label class="sr-only" for="filter">Поиск по цене</label>
+          <input class="filter-price__input" type="text" name="filter" id="filter" data-min="0" data-max="1100"
+            data-from="100" data-to="1000">
+        </form>
+      </li>
+
+    </ul>
+</section>

@@ -1,0 +1,24 @@
+.counter {
+  display: flex;
+  text-align: center;
+  height: 24px;
+  font-size: 16px;
+
+  &__control {
+    background-color: $accent;
+    color: $white;
+    width: 24px;
+    height: 24px;
+    border-radius: 3px 0 0 3px;
+    cursor: pointer;
+
+    &--plus {
+      border-radius: 0 3px 3px 0;
+    }
+  }
+
+  &__current {
+    width: 36px;
+    background-color: $green-100;
+  }
+}

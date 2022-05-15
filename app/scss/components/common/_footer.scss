@@ -1,0 +1,195 @@
+.footer {
+  padding: 30px 0;
+  background-color: $dark-800;
+  color: $white;
+  font-weight: 400;
+
+  &__logo {
+    margin-bottom: 20px;
+    display: inline-block;
+    padding-left: 15px;
+
+    @include mq('phone') {
+      margin: 0 auto 25px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__top {
+    margin-bottom: 25px;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    @include mq('tablet-2') {
+      flex-wrap: wrap;
+    }
+
+    @include mq('phone') {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__mail {
+    display: block;
+    margin-bottom: 18px;
+  }
+
+  &__box {
+    max-width: 306px;
+    width: 100%;
+    margin-right: 70px;
+
+    @include mq('desktop') {
+      margin-right: 25px;
+    }
+
+    @include mq('tablet-2') {
+      margin: 0 10px 25px 0;
+    }
+
+    @include mq('phone') {
+      order: 1;
+      margin: 0;
+    }
+  }
+
+  &__form {
+    position: relative;
+  }
+
+  &__input {
+    padding: 12px;
+    border-radius: 6px 0 0 6px;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+  }
+
+  &__button {
+    position: absolute;
+    height: 100%;
+    background-color: $accent;
+    border-radius: 0 6px 6px 0;
+    text-transform: uppercase;
+  }
+
+  &__email {
+    margin: 0 95px 0 0;
+
+    @include mq('phone') {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      order: 1;
+    }
+  }
+
+  &__button {
+    font-size: 12px;
+    padding: 12px 16px;
+  }
+
+  &__card {
+    border-top: 1px solid rgba($white, 0.1);
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+
+  @include mq('phone') {
+    flex-direction: column;
+  }
+}
+
+.payment {
+  display: flex;
+
+  &__img {
+    &:first-child {
+      margin-right: 25px;
+    }
+  }
+
+  @include mq('phone') {
+    order: -1;
+    margin-bottom: 25px;
+  }
+}
+
+.footer-contact {
+  margin: 0;
+
+  @include mq('tablet-2') {
+    width: 100%;
+  }
+
+  @include mq('phone') {
+    order: -1;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @include mq('phone') {
+      margin-bottom: 25px;
+      align-items: center;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin-bottom: 18px;
+  }
+}
+
+.footer-menu {
+  column-count: 3;
+  column-gap: 75px;
+
+  @include mq('desktop') {
+    column-count: 2;
+  }
+
+  @include mq('tablet-2') {
+    column-count: 3;
+    column-gap: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgba($white, 0.1);
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+  }
+
+  @include mq('tablet') {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  @include mq('phone') {
+    column-count: 2;
+    column-gap: 50px;
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 25px;
+    padding: 25px 0;
+    border-top: 1px solid rgba($white, 0.1);
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 18px;
+    }
+  }
+}

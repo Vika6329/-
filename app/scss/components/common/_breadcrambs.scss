@@ -1,0 +1,42 @@
+.breadcrambs {
+  background-color: $silver-100;
+  padding: 24px 0;
+  margin-bottom: 48px;
+
+  @include mq('phone') {
+    margin-bottom: 30px;
+  }
+
+  &__list {
+    display: flex;
+
+    @include mq('phone') {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    position: relative;
+    padding-right: 16px;
+    letter-spacing: 0.03em;
+    line-height: 1.2;
+    font-weight: 400;
+
+    &::after {
+      @include pseudo;
+      right: 6px;
+      top: 4px;
+      background-image: url('../images/global/chevron.svg');
+      width: 6px;
+      height: 10px;
+    }
+
+    &:last-child {
+      color: $accent;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

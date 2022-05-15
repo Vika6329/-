@@ -1,0 +1,259 @@
+.header {
+  position: relative;
+
+  &__top {
+    padding: 15px 0;
+    background-color: $dark-800;
+    color: $white;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @include mq('tablet') {
+      padding: 8px 0;
+    }
+
+    @include mq('phone') {
+      padding: 3px 0;
+    }
+  }
+
+  &__top-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include mq('tablet-2') {
+      align-items: center;
+    }
+  }
+
+  &__content {
+    padding: 26px 0;
+    background-color: $accent;
+
+    @include mq('tablet') {
+      padding: 10px 0;
+    }
+
+    @include mq('phone') {
+      padding: 6px 0;
+    }
+  }
+
+  &__logo {
+    margin-right: 24px;
+
+    @include mq('desktop') {
+      max-width: 47px;
+      width: 100%;
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    @include mq('tablet-2') {
+      justify-content: space-between;
+    }
+  }
+}
+
+.menu-btn {
+  position: relative;
+  display: none;
+  width: 44px;
+  height: 44px;
+  z-index: 2;
+
+  &::after,
+  &::before,
+  & span {
+    height: 2px;
+    width: 30px;
+    left: 2px;
+    background-color: #fff;
+    transition: transform 0.5s;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+  }
+
+  &::before {
+    top: 10px;
+  }
+
+  &::after {
+    bottom: 12px;
+  }
+
+  &__line {
+    position: absolute;
+    top: 45%;
+  }
+
+  @include mq('tablet-2') {
+    display: block;
+  }
+}
+
+.header-menu {
+  position: absolute;
+  max-width: 300px;
+  height: 100vh;
+  background-color: $white;
+  z-index: 50;
+  color: $dark-800;
+  font-size: 18px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: translateX(-200%);
+  transition: transform 0.5s;
+
+  &.header-menu--active {
+    transform: translateX(0);
+  }
+
+  .header__logo {
+    max-width: 100%;
+    margin-right: 0;
+  }
+
+  &__close {
+    position: relative;
+    padding: 22px;
+    cursor: pointer;
+    z-index: 50;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      left: 10px;
+      height: 1px;
+      width: 18px;
+      background-color: $black;
+    }
+
+    &::before {
+      top: 48%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 50%;
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 26px 26px 15px;
+  }
+
+  &__registration {
+    position: relative;
+    color: $white;
+    background-color: $accent;
+    padding: 15px;
+  }
+
+  &__login {
+
+    &--user {
+      padding: 0 15px 0 40px;
+      margin-right: 15px;
+      border-right: 1px solid $white;
+    }
+
+    &--user::before {
+      @include pseudo;
+      top: 8px;
+      mask-image: url('../images/sprite.svg#icon-user');
+      width: 25px;
+      height: 32px;
+      @extend %mask;
+      background-color: $white;
+    }
+  }
+
+  .catalog {
+    display: block;
+    max-width: 100%;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid rgba($silver-600, 0.3);
+
+    &::after {
+      display: none;
+    }
+
+    &__button {
+      color: inherit;
+      padding: 0;
+    }
+  }
+
+  .footer-contact {
+    &__link {
+      position: relative;
+      padding-left: 40px;
+      line-height: 1.2;
+
+      &::before {
+        @include pseudo;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        @extend %bg;
+      }
+
+      &--tel {
+        &::before {
+          background-image: url('../images/sprite.svg#icon-tel');
+        }
+      }
+
+      &--place::before {
+        background-image: url('../images/sprite.svg#icon-place');
+        height: 32px;
+      }
+    }
+
+    &__contacts {
+      padding: 0 15px 25px;
+      border-bottom: 1px solid rgba($silver-600, 0.3);
+      margin-bottom: 25px;
+      align-items: start;
+    }
+  }
+
+  .footer-menu {
+    column-count: 1;
+    margin-left: inherit;
+
+    &__item {
+      padding: 10px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+
+  .social {
+    margin-right: auto;
+
+    &__img {
+      fill: $black;
+    }
+  }
+}

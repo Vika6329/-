@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Фрешок | Каталог товаров</title>
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="images/global/favicon.png">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    @include('./common/header.html')
+    <main>
+      @include('./common/breadcrambs.html')
+      <div class="container">
+        <h2 class="title catalog-title">Каталог товаров</h2>
+
+        <div class="  catalog-inner">
+          @include('./catalog-page/filter.html')
+          @include('./catalog-page/catalog-content.html')
+        </div>
+      </div>
+      @include('./common/advantages.html')
+    </main>
+    @include('./common/footer.html')
+    <script src="js/main.min.js"></script>
+  </div>
+</body>
+
+</html>

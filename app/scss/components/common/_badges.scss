@@ -1,0 +1,36 @@
+.badges {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 10px;
+  line-height: 1;
+  font-weight: 700;
+  color: $white;
+  text-transform: uppercase;
+  z-index: 1;
+
+
+  &__item {
+    display: block;
+    padding: 3px 6px;
+    border-radius: 6px;
+    width: fit-content;
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    &--novetly {
+      background-color: $accent;
+    }
+
+    &--discount {
+      background-color: $red;
+    }
+
+    &--hit {
+      background-color: $orange;
+    }
+  }
+
+}

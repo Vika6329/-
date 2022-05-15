@@ -1,0 +1,90 @@
+.offers {
+  position: relative;
+  margin-bottom: 46px;
+
+  @include mq('phone') {
+    margin-bottom: 64px;
+  }
+
+  &__title {
+    text-align: inherit;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 71px;
+
+    @include mq('phone') {
+      font-size: 24px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .card {
+    max-width: 300px;
+    margin-right: 10px;
+
+    &__status {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 18px;
+      margin-bottom: 9px;
+    }
+
+    &__name {
+      margin-bottom: auto;
+      height: 60px;
+    }
+
+    &__box {
+      margin: 0;
+    }
+  }
+
+  &__arrow {
+    width: 20px;
+    fill: $dark-500;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    right: 0;
+    top: -109px;
+    border: 1px solid $silver-600;
+    border-radius: 6px;
+    width: 60px;
+    height: 60px;
+  }
+
+  .slick-prev {
+    right: 92px;
+  }
+
+  .slick-dots {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+
+    button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      border: 1px solid $accent;
+      border-radius: 50%;
+
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+    }
+
+    .slick-active {
+      button {
+        background-color: $accent;
+      }
+    }
+  }
+}
